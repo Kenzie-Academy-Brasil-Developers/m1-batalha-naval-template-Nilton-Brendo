@@ -13,19 +13,19 @@ const seaBoard = [
 
 function allocateShips(shipPositions, initialBoard) {
   for (let i = 0; i < shipPositions.length; i++) {
-    let linha = shipPositions[i][0];
-    let coluna = shipPositions[i][1];
-    initialBoard[linha][coluna] = "S";
+    const row = shipPositions[i][0];
+    const column = shipPositions[i][1];
+    initialBoard[row][column] = "S";
   }
   return initialBoard;
 }
 
 function checkGuesses(guesses, mountedBoard) {
   for (let i = 0; i < guesses.length; i++) {
-    let linha = guesses[i][0];
-    let coluna = guesses[i][1];
-    if (mountedBoard[linha][coluna] === "S") {
-      mountedBoard[linha][coluna] = "X";
+    const row = guesses[i][0];
+    const column = guesses[i][1];
+    if (mountedBoard[row][column] === "S") {
+      mountedBoard[row][column] = "X";
     }
   }
   return mountedBoard;
